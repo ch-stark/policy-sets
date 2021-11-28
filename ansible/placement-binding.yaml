@@ -1,0 +1,25 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+    name: common-placementbinding-two
+    namespace: common-policies
+placementRef:
+    name: common-placementrules-two
+    kind: PlacementRule
+    apiGroup: apps.open-cluster-management.io
+subjects:
+    - name: common-sriov-sub-policy
+      kind: Policy
+      apiGroup: policy.open-cluster-management.io
+    - name: common-ptp-sub-policy
+      kind: Policy
+      apiGroup: policy.open-cluster-management.io
+    - name: common-pao-sub-policy
+      kind: Policy
+      apiGroup: policy.open-cluster-management.io
+    - name: common-log-sub-policy
+      kind: Policy
+      apiGroup: policy.open-cluster-management.io
+    - name: common-storage-sub-policy
+      kind: Policy
+      apiGroup: policy.open-cluster-management.io
