@@ -11,8 +11,8 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: policies
-  namespace: policy-acs-securedcluster
+  name: policy-acs-securedcluster
+  namespace: policies
   annotations:
     policy.open-cluster-management.io/standards: NIST SP 800-53
     policy.open-cluster-management.io/categories: CM Configuration Management
