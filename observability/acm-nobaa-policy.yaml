@@ -2,7 +2,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
   name: policy-object-storage
-  namespace: policy-object-storage
+  namespace: policies
   annotations:
     policy.open-cluster-management.io/standards: Storage
     policy.open-cluster-management.io/categories: Object
