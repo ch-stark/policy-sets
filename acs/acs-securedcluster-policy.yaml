@@ -95,6 +95,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-acs-sensor
+  namespace: policies
 placementRef:
   name: placement-policy-acs-sensor
   kind: PlacementRule
@@ -108,6 +109,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: placement-policy-acs-sensor
+  namespace: policies
 spec:
   clusterConditions:
   - status: "True"

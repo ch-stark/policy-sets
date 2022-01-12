@@ -234,6 +234,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-advanced-cluster-security-operator
+  namespace: policies
 placementRef:
   name: placement-policy-advanced-cluster-security-operator
   kind: PlacementRule
@@ -247,6 +248,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: placement-policy-advanced-cluster-security-operator
+  namespace: policies
 spec:
   clusterConditions:
   - status: "True"

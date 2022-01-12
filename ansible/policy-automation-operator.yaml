@@ -74,6 +74,8 @@ spec:
   clusterSelector:
     matchExpressions:
       - key: local-cluster
-        operator: in
-        values: 'true'
+        operator: In
+        values:
+          - 'true'
+
 
