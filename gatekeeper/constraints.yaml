@@ -4,8 +4,6 @@ metadata:
   annotations:
     description: Requires container images to begin with a repo string from a specified list.
   name: k8sallowedrepos
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -67,8 +65,6 @@ metadata:
   annotations:
     description: Requires containers to have memory and CPU limits set and within a specified maximum amount.
   name: k8scontainerlimits
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -281,8 +277,6 @@ metadata:
   annotations:
     description: Requires Ingress resources to be HTTPS only; TLS configuration should be set and `kubernetes.io/ingress.allow-http` annotation equals false.
   name: k8shttpsonly
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -313,8 +307,6 @@ metadata:
   annotations:
     description: Requires container images to contain a digest.
   name: k8simagedigests
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -345,8 +337,6 @@ metadata:
   annotations:
     description: Controls the user and group IDs of the container.
   name: k8spspallowedusers
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -526,8 +516,6 @@ metadata:
   annotations:
     description: Controls restricting escalation to root privileges.
   name: k8spspallowprivilegeescalationcontainer
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -567,8 +555,6 @@ metadata:
   annotations:
     description: Controls the AppArmor profile used by containers.
   name: k8spspapparmor
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -689,8 +675,6 @@ metadata:
   annotations:
     description: Controls the allowlist of Flexvolume drivers.
   name: k8spspflexvolumes
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -737,8 +721,6 @@ metadata:
   annotations:
     description: Controls the `sysctl` profile used by containers.
   name: k8spspforbiddensysctls
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -781,8 +763,6 @@ metadata:
   annotations:
     description: Controls allocating an FSGroup that owns the Pod's volumes.
   name: k8spspfsgroup
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -858,8 +838,6 @@ metadata:
   annotations:
     description: Controls usage of the host filesystem.
   name: k8spsphostfilesystem
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -999,8 +977,6 @@ metadata:
   annotations:
     description: Controls usage of host networking and ports.
   name: k8spsphostnetworkingports
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1054,8 +1030,6 @@ metadata:
   annotations:
     description: Controls running of privileged containers.
   name: k8spspprivilegedcontainer
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1086,8 +1060,6 @@ metadata:
   annotations:
     description: Controls the allowed `procMount` types for the container.
   name: k8spspprocmount
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1156,8 +1128,6 @@ metadata:
   annotations:
     description: Requires the use of a read only root file system.
   name: k8spspreadonlyrootfilesystem
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1199,8 +1169,6 @@ metadata:
   annotations:
     description: Controls the seccomp profile used by containers.
   name: k8spspseccomp
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1261,8 +1229,6 @@ metadata:
   annotations:
     description: Controls the SELinux context of the container.
   name: k8spspselinuxv2
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1338,8 +1304,6 @@ metadata:
   annotations:
     description: Controls usage of volume types.
   name: k8spspvolumetypes
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1379,8 +1343,6 @@ metadata:
   annotations:
     description: Requires all resources to contain a specified label with a value matching a provided regular expression.
   name: k8srequiredlabels
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1440,8 +1402,6 @@ metadata:
   annotations:
     description: Requires Pods to have readiness and/or liveness probes.
   name: k8srequiredprobes
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1498,8 +1458,6 @@ metadata:
   annotations:
     description: Requires all Ingress hosts to be unique.
   name: k8suniqueingresshost
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
@@ -1532,8 +1490,6 @@ metadata:
   annotations:
     description: Requires Services to have unique selectors within a namespace.
   name: k8suniqueserviceselector
-  labels:
-    {{- include "lagoon-gatekeeper.labels" . | nindent 4 }}
 spec:
   crd:
     spec:
