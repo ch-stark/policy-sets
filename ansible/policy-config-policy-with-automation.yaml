@@ -55,7 +55,7 @@ spec:
                 spec:
                   automationDef:
                     name: Demo Job Template
-                    secret: '{{ fromSecret "ansible-automation-platform" "mycred " "data"}}'
+                    secret: ansible
                     type: AnsibleJob
                   mode: disabled
                   policyRef: policy-namespace-prod-ns
